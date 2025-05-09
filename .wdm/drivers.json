@@ -14,5 +14,9 @@
     "mac64_chromedriver_135.0.7049.114_for_135.0.7049": {
         "timestamp": "02/05/2025",
         "binary_path": "/Users/manas/Developer/Naukri-master/.wdm/drivers/chromedriver/mac64/135.0.7049.114/chromedriver-mac-arm64/chromedriver"
+    },
+    "mac64_chromedriver_136.0.7103.92_for_136.0.7103": {
+        "timestamp": "10/05/2025",
+        "binary_path": "/Users/manas/Developer/Naukri-master/.wdm/drivers/chromedriver/mac64/136.0.7103.92/chromedriver-mac-arm64/chromedriver"
     }
 }
