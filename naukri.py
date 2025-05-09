@@ -160,26 +160,26 @@ def LoadNaukri(headless):
     options.add_argument("--start-maximized")
     options.add_argument("--disable-popups")
     options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
 
-    # ✅ Use a temporary user data dir to avoid "already in use" errors
-    temp_profile = tempfile.mkdtemp()
-    options.add_argument(f"--user-data-dir={temp_profile}")
+    # ✅ Use a fresh temp directory for Chrome user profile
+    user_data_dir = tempfile.mkdtemp()
+    options.add_argument(f"--user-data-dir={user_data_dir}")
 
     if headless:
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--headless=new")  # Modern headless mode
-        options.add_argument("--no-sandbox")
+        options.add_argument("--headless=new")  # Modern headless Chrome
 
     driver = None
     try:
         driver = webdriver.Chrome(options=options, service=ChromeService(CM().install()))
+        log_msg("Google Chrome Launched!")
+        driver.implicitly_wait(3)
+        driver.get(NaukriURL)
+        return driver
     except Exception as e:
         catch(e)
-    log_msg("Google Chrome Launched!")
-
-    driver.implicitly_wait(3)
-    driver.get(NaukriURL)
-    return driver
+        return None
 
 
 def naukriLogin(headless=False):
