@@ -1,7 +1,7 @@
 #! python3
 # -*- coding: utf-8 -*-
 """Naukri Daily update - Using Chrome"""
-
+import tempfile
 import io
 import logging
 import os
@@ -160,14 +160,21 @@ def LoadNaukri(headless):
     options.add_argument("--start-maximized")  # ("--kiosk") for MAC
     options.add_argument("--disable-popups")
     options.add_argument("--disable-gpu")
+    options.add_argument(f"--user-data-dir={tempfile.mkdtemp()}")
     if headless:
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("headless")
 
+    # Add Chrome options from environment variable
+    if "CHROME_OPTS" in os.environ:
+        for opt in os.environ["CHROME_OPTS"].split():
+            options.add_argument(opt)
+    
     # updated to use ChromeDriverManager to match correct chromedriver automatically
+    
     driver = None
     try:
-        driver = webdriver.Chrome(options, service=ChromeService(CM().install()))
+        driver = webdriver.Chrome(options)  # Removed service argument
     except:
         driver = webdriver.Chrome(options)
     log_msg("Google Chrome Launched!")

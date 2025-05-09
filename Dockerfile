@@ -1,27 +1,28 @@
-FROM python:3.11-slim
+FROM python:3.9-slim-buster
 
-# Install dependencies for Chrome and Python
-RUN apt-get update && apt-get install -y \
-    curl unzip gnupg wget libvulkan1 \
-    fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 \
-    libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 libnspr4 libnss3 libx11-xcb1 \
-    libxcomposite1 libxdamage1 libxrandr2 xdg-utils xvfb libgbm1 libgtk-3-0 \
-    && rm -rf /var/lib/apt/lists/*
+# Install Chrome and ChromeDriver
+RUN apt-get update && \
+    apt-get install -y wget gnupg && \
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
+    apt-get update && \
+    apt-get install -y google-chrome-stable && \
+    wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip && \
+    unzip chromedriver_linux64.zip -d /usr/local/bin/ && \
+    chmod +x /usr/local/bin/chromedriver
 
-# Download and install Google Chrome
-RUN wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && dpkg -i chrome.deb || apt-get -fy install \
-    && rm chrome.deb
-
-# Set display port for headless Chrome
-ENV DISPLAY=:99
-
-# Create app directory
-WORKDIR /app
-COPY . /app
+# Set Chrome options to avoid common issues in containers
+ENV CHROME_OPTS="--headless --no-sandbox --disable-dev-shm-usage --disable-gpu"
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-# Run your script
+# Copy your script
+COPY naukri.py .
+COPY ocv/ .  # Copy the resume directory
+COPY mcv/ .
+
+# Run the script
 CMD ["python", "naukri.py"]
