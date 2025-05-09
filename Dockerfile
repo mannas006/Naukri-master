@@ -35,4 +35,4 @@ WORKDIR /app
 COPY . /app
 
 # Set the entrypoint to your script (or main app)
-CMD ["python", "your_script.py"]
+CMD ["python", "naukri.py"]
