@@ -1,7 +1,7 @@
 #! python3
 # -*- coding: utf-8 -*-
 """Naukri Daily update - Using Chrome"""
-import tempfile  # Add this at the top of the script if not already
+
 import io
 import logging
 import os
@@ -157,29 +157,24 @@ def LoadNaukri(headless):
     """Open Chrome to load Naukri.com"""
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-notifications")
-    options.add_argument("--start-maximized")
+    options.add_argument("--start-maximized")  # ("--kiosk") for MAC
     options.add_argument("--disable-popups")
     options.add_argument("--disable-gpu")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-
-    # ✅ Use a fresh temp directory for Chrome user profile
-    user_data_dir = tempfile.mkdtemp()
-    options.add_argument(f"--user-data-dir={user_data_dir}")
-
     if headless:
-        options.add_argument("--headless=new")  # Modern headless Chrome
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("headless")
 
+    # updated to use ChromeDriverManager to match correct chromedriver automatically
     driver = None
     try:
-        driver = webdriver.Chrome(options=options, service=ChromeService(CM().install()))
-        log_msg("Google Chrome Launched!")
-        driver.implicitly_wait(3)
-        driver.get(NaukriURL)
-        return driver
-    except Exception as e:
-        catch(e)
-        return None
+        driver = webdriver.Chrome(options, service=ChromeService(CM().install()))
+    except:
+        driver = webdriver.Chrome(options)
+    log_msg("Google Chrome Launched!")
+
+    driver.implicitly_wait(3)
+    driver.get(NaukriURL)
+    return driver
 
 
 def naukriLogin(headless=False):
