@@ -860,3 +860,80 @@ Stacktrace:
 2025-05-12 00:55:57,252    : Driver Quit Successfully
 2025-05-12 00:55:57,252    : -----Naukri.py Script Run Ended-----
 
+2025-05-12 01:38:25,380    : -----Naukri.py Script Run Begin-----
+2025-05-12 01:38:28,584    : Google Chrome Launched!
+2025-05-12 01:38:30,795    : Jobseeker's Login: Search the Best Jobs available in India & Abroad - Naukri.com
+2025-05-12 01:38:30,798    : Website Loaded Successfully.
+2025-05-12 01:38:48,211    : Element not found with XPATH : //*[contains(@class, 'cross-icon') or @alt='cross-icon']
+2025-05-12 01:38:53,257    : Element not found with XPATH : //*[text() = 'SKIP AND CONTINUE']
+2025-05-12 01:38:54,287    : Naukri Login Successful
+2025-05-12 01:38:59,756    : <class 'selenium.common.exceptions.NoSuchWindowException'> : Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+0   chromedriver                        0x00000001008503bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100848684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100385fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100360798 chromedriver + 133016
+4   chromedriver                        0x00000001003f5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x000000010040db50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001003c13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001008147e0 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000100817ab0 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x00000001007f5db4 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000100818328 cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x00000001007e7640 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x000000010083828c cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000100838418 cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001008482d0 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 97.
+2025-05-12 01:38:59,757    : <class 'AttributeError'> : 'NoneType' object has no attribute 'click' at Line 263.
+2025-05-12 01:38:59,759    : <class 'selenium.common.exceptions.NoSuchWindowException'> : Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+0   chromedriver                        0x00000001008503bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100848684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100385fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100360798 chromedriver + 133016
+4   chromedriver                        0x00000001003f5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x000000010040db50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001003c13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001008147e0 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000100817ab0 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x00000001007f5db4 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000100818328 cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x00000001007e7640 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x000000010083828c cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000100838418 cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001008482d0 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 360.
+2025-05-12 01:39:01,768    : <class 'selenium.common.exceptions.NoSuchWindowException'> : Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+0   chromedriver                        0x00000001008503bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100848684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100385fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100360798 chromedriver + 133016
+4   chromedriver                        0x00000001003f5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x00000001003fca44 cxxbridge1$string$len + 576164
+6   chromedriver                        0x00000001003c13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001008147e0 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000100817ab0 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x00000001007f5db4 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000100818328 cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x00000001007e7640 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x000000010083828c cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000100838418 cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001008482d0 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 141.
+2025-05-12 01:39:01,873    : Driver Quit Successfully
+2025-05-12 01:39:01,873    : -----Naukri.py Script Run Ended-----
+

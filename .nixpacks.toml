@@ -1,10 +1,18 @@
 [phases.setup]
-nixPkgs = ["wget", "curl", "unzip", "python311", "chromium"]
+nixPkgs = ["python311", "curl", "unzip", "glibc", "fontconfig", "nss", "atk", "at-spi2-core", "cups", "gtk3", "pango", "libdrm", "libxcomposite", "libxdamage", "libxrandr", "libxcb", "libxfixes", "libx11", "mesa", "libxext", "alsa-lib", "libxshmfence"]
 
 [phases.install]
 cmds = [
   "pip install -r requirements.txt",
-  "wget -q https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/136.0.7103.92/linux64/chromedriver-linux64.zip",
+
+  # Download Chrome
+  "curl -LO https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/linux64/chrome-linux64.zip",
+  "unzip chrome-linux64.zip",
+  "mv chrome-linux64 /opt/chrome",
+  "chmod +x /opt/chrome/chrome",
+
+  # Download ChromeDriver
+  "curl -LO https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/linux64/chromedriver-linux64.zip",
   "unzip chromedriver-linux64.zip",
   "mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver",
   "chmod +x /usr/local/bin/chromedriver"
