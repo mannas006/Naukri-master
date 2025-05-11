@@ -437,3 +437,426 @@ Stacktrace:
 2025-05-10 01:25:00,032    : Driver Quit Successfully
 2025-05-10 01:25:00,032    : -----Naukri.py Script Run Ended-----
 
+2025-05-12 00:12:14,428    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:12:18,637    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:12:20,753    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:12:21,482    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010140ebac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010140720c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000100f6dafc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000100fa5bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000100fa4d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000100fa0c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000100f9cdec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000100fe1efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000100fe1770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000100fa8ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x00000001013d7664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x00000001013da978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x00000001013bcd04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x00000001013db220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x00000001013adcec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001013f78d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x00000001013f7a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000101406e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 197.
+2025-05-12 00:12:21,485    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 138.
+2025-05-12 00:12:21,485    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 145.
+2025-05-12 00:12:21,485    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:13:48,887    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:13:49,086    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:13:50,513    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:13:51,194    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010303ebac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010303720c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000102b9dafc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000102bd5bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000102bd4d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000102bd0c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000102bccdec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000102c11efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000102c11770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000102bd8ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x0000000103007664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x000000010300a978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000102fecd04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x000000010300b220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000102fddcec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001030278d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x0000000103027a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000103036e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 197.
+2025-05-12 00:13:51,196    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 138.
+2025-05-12 00:13:51,196    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 145.
+2025-05-12 00:13:51,196    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:17:49,114    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:17:49,310    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:17:50,653    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:17:51,337    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000102f3ebac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x0000000102f3720c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000102a9dafc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000102ad5bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000102ad4d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000102ad0c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000102accdec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000102b11efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000102b11770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000102ad8ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x0000000102f07664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x0000000102f0a978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000102eecd04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x0000000102f0b220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000102eddcec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x0000000102f278d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x0000000102f27a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000102f36e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 197.
+2025-05-12 00:17:51,338    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 138.
+2025-05-12 00:17:51,338    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 145.
+2025-05-12 00:17:51,338    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:24:57,744    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:24:57,954    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:24:59,341    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:25:00,632    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001009aebac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x00000001009a720c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x000000010050dafc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000100545bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000100544d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000100540c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x000000010053cdec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000100581efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000100581770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000100548ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x0000000100977664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x000000010097a978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x000000010095cd04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x000000010097b220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x000000010094dcec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001009978d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x0000000100997a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x00000001009a6e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 197.
+2025-05-12 00:25:00,633    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 138.
+2025-05-12 00:25:00,633    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 145.
+2025-05-12 00:25:00,633    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:26:16,988    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:26:17,185    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:26:18,865    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:26:19,528    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010290abac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010290320c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000102469afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x00000001024a1bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x00000001024a0d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x000000010249cc80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000102498dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x00000001024ddefc cxxbridge1$string$len + 569508
+8   chromedriver                        0x00000001024dd770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x00000001024a4ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x00000001028d3664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x00000001028d6978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x00000001028b8d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x00000001028d7220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x00000001028a9cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001028f38d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x00000001028f3a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000102902e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 197.
+2025-05-12 00:26:19,529    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 138.
+2025-05-12 00:26:19,529    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 145.
+2025-05-12 00:26:19,529    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:27:49,658    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:27:49,781    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:27:50,655    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:27:51,315    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000104dc6bac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x0000000104dbf20c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000104925afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x000000010495dbfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x000000010495cd84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000104958c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000104954dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000104999efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000104999770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000104960ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x0000000104d8f664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x0000000104d92978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000104d74d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x0000000104d93220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000104d65cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x0000000104daf8d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x0000000104dafa5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000104dbee80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 207.
+2025-05-12 00:27:51,316    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 148.
+2025-05-12 00:27:51,316    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 155.
+2025-05-12 00:27:51,316    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:28:17,687    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:28:17,811    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:28:18,661    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:28:19,340    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001033e2bac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x00000001033db20c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000102f41afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000102f79bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000102f78d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000102f74c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000102f70dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000102fb5efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000102fb5770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000102f7cba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x00000001033ab664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x00000001033ae978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000103390d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x00000001033af220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000103381cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001033cb8d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x00000001033cba5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x00000001033dae80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 207.
+2025-05-12 00:28:19,341    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 148.
+2025-05-12 00:28:19,341    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 155.
+2025-05-12 00:28:19,341    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:29:00,943    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:29:01,067    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:29:01,862    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:29:02,510    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001006babac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x00000001006b320c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000100219afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000100251bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000100250d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x000000010024cc80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000100248dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x000000010028defc cxxbridge1$string$len + 569508
+8   chromedriver                        0x000000010028d770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000100254ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x0000000100683664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x0000000100686978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000100668d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x0000000100687220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000100659cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001006a38d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x00000001006a3a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x00000001006b2e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 210.
+2025-05-12 00:29:02,512    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 151.
+2025-05-12 00:29:02,512    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 158.
+2025-05-12 00:29:02,512    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:31:19,932    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:31:20,169    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:31:21,657    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:31:22,373    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001026eabac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x00000001026e320c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000102249afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000102281bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000102280d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x000000010227cc80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000102278dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x00000001022bdefc cxxbridge1$string$len + 569508
+8   chromedriver                        0x00000001022bd770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000102284ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x00000001026b3664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x00000001026b6978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000102698d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x00000001026b7220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000102689cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001026d38d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x00000001026d3a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x00000001026e2e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 194.
+2025-05-12 00:31:22,374    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 139.
+2025-05-12 00:31:22,374    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 146.
+2025-05-12 00:31:22,374    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:34:58,457    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:34:58,642    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:35:00,026    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:35:00,692    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000101392bac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010138b20c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000100ef1afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000100f29bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000100f28d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000100f24c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000100f20dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000100f65efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000100f65770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000100f2cba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x000000010135b664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x000000010135e978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000101340d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x000000010135f220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000101331cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x000000010137b8d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x000000010137ba5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x000000010138ae80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 194.
+2025-05-12 00:35:00,693    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 139.
+2025-05-12 00:35:00,693    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 146.
+2025-05-12 00:35:00,693    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:47:52,407    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:47:52,619    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:47:54,440    : The chromedriver version (133.0.6943.98) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-12 00:47:55,119    : <class 'selenium.common.exceptions.SessionNotCreatedException'> : Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 136.0.7103.93 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010111ebac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010111720c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000100c7dafc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000100cb5bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000100cb4d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000100cb0c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000100cacdec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000100cf1efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000100cf1770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000100cb8ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x00000001010e7664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x00000001010ea978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x00000001010ccd04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x00000001010eb220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x00000001010bdcec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001011078d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x0000000101107a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000101116e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 196.
+2025-05-12 00:47:55,121    : <class 'AttributeError'> : 'NoneType' object has no attribute 'close' at Line 141.
+2025-05-12 00:47:55,121    : <class 'AttributeError'> : 'NoneType' object has no attribute 'quit' at Line 148.
+2025-05-12 00:47:55,121    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:52:16,579    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:52:18,144    : Google Chrome Launched!
+2025-05-12 00:52:22,225    : Jobseeker's Login: Search the Best Jobs available in India & Abroad - Naukri.com
+2025-05-12 00:52:22,228    : Website Loaded Successfully.
+2025-05-12 00:52:30,600    : <class 'selenium.common.exceptions.NoSuchWindowException'> : Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+0   chromedriver                        0x000000010076c3bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100764684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x00000001002a1fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010027c798 chromedriver + 133016
+4   chromedriver                        0x0000000100311048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000100329b50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001002dd3f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001007307e0 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000100733ab0 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000100711db4 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000100734328 cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000100703640 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x000000010075428c cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000100754418 cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001007642d0 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 97.
+2025-05-12 00:52:30,601    : <class 'AttributeError'> : 'NoneType' object has no attribute 'click' at Line 225.
+2025-05-12 00:52:30,603    : <class 'selenium.common.exceptions.NoSuchWindowException'> : Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+0   chromedriver                        0x000000010076c3bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100764684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x00000001002a1fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010027c798 chromedriver + 133016
+4   chromedriver                        0x0000000100311048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000100318a44 cxxbridge1$string$len + 576164
+6   chromedriver                        0x00000001002dd3f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001007307e0 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000100733ab0 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000100711db4 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000100734328 cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000100703640 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x000000010075428c cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000100754418 cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001007642d0 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x000000019d931c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019d92cb80 thread_start + 8
+ at Line 141.
+2025-05-12 00:52:30,692    : Driver Quit Successfully
+2025-05-12 00:52:30,692    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:53:17,507    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:53:18,951    : Google Chrome Launched!
+2025-05-12 00:53:23,188    : Jobseeker's Login: Search the Best Jobs available in India & Abroad - Naukri.com
+2025-05-12 00:53:23,192    : Website Loaded Successfully.
+2025-05-12 00:53:40,658    : Element not found with XPATH : //*[contains(@class, 'cross-icon') or @alt='cross-icon']
+2025-05-12 00:53:45,704    : Element not found with XPATH : //*[text() = 'SKIP AND CONTINUE']
+2025-05-12 00:53:46,731    : Naukri Login Successful
+2025-05-12 00:53:46,731    : <class 'NameError'> : name 'UpdateProfile' is not defined at Line 408.
+2025-05-12 00:53:46,853    : Driver Closed Successfully
+2025-05-12 00:53:46,910    : Driver Quit Successfully
+2025-05-12 00:53:46,910    : -----Naukri.py Script Run Ended-----
+
+2025-05-12 00:54:31,100    : -----Naukri.py Script Run Begin-----
+2025-05-12 00:54:32,956    : Google Chrome Launched!
+2025-05-12 00:54:38,573    : Jobseeker's Login: Search the Best Jobs available in India & Abroad - Naukri.com
+2025-05-12 00:54:38,576    : Website Loaded Successfully.
+2025-05-12 00:54:55,976    : Element not found with XPATH : //*[contains(@class, 'cross-icon') or @alt='cross-icon']
+2025-05-12 00:55:01,023    : Element not found with XPATH : //*[text() = 'SKIP AND CONTINUE']
+2025-05-12 00:55:02,054    : Naukri Login Successful
+2025-05-12 00:55:13,754    : Element not found with XPATH : //*[contains(@class, 'crossIcon')]
+2025-05-12 00:55:24,958    : Element not found with XPATH : //*[@name='mobile'] | //*[@id='mob_number']
+2025-05-12 00:55:27,991    : Element not found with XPATH : //*[@name='mobile'] | //*[@id='mob_number']
+2025-05-12 00:55:29,075    : Profile Update Successful
+2025-05-12 00:55:46,814    : Element not found with XPATH : //*[contains(@class, 'crossIcon')]
+2025-05-12 00:55:53,972    : Element not found with ID : //button[@type='button']
+2025-05-12 00:55:55,014    : Resume Document Upload Successful. Last Updated date = Uploaded on May 12, 2025
+2025-05-12 00:55:57,157    : Driver Closed Successfully
+2025-05-12 00:55:57,252    : Driver Quit Successfully
+2025-05-12 00:55:57,252    : -----Naukri.py Script Run Ended-----
+

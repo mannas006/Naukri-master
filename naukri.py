@@ -1,7 +1,7 @@
 #! python3
 # -*- coding: utf-8 -*-
 """Naukri Daily update - Using Chrome"""
-import tempfile
+
 import io
 import logging
 import os
@@ -20,7 +20,10 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager as CM
+from selenium.webdriver.chrome.service import Service as ChromeService
+
+chrome_path = "/opt/homebrew/bin/chromedriver"
+
 
 # Add folder Path of your resume
 originalResumePath = "ocv/Manas_cv.pdf"
@@ -33,7 +36,7 @@ password = "Manas1998d@"
 mob = "9635623705"  # Type your mobile number here
 
 # False if you dont want to add Random HIDDEN chars to your resume
-updatePDF = True
+updatePDF = False
 
 # If Headless = True, script runs Chrome in headless mode without visible GUI
 headless = False
@@ -155,31 +158,26 @@ def randomText():
 
 def LoadNaukri(headless):
     """Open Chrome to load Naukri.com"""
+
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-notifications")
     options.add_argument("--start-maximized")  # ("--kiosk") for MAC
     options.add_argument("--disable-popups")
     options.add_argument("--disable-gpu")
-    options.add_argument(f"--user-data-dir={tempfile.mkdtemp()}")
     if headless:
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("headless")
 
-    # Add Chrome options from environment variable
-    if "CHROME_OPTS" in os.environ:
-        for opt in os.environ["CHROME_OPTS"].split():
-            options.add_argument(opt)
-    
-    # updated to use ChromeDriverManager to match correct chromedriver automatically
-    
+    # updated to use latest selenium Chrome service
     driver = None
     try:
-        driver = webdriver.Chrome(options)  # Removed service argument
-    except:
+        driver = webdriver.Chrome(options=options, service=ChromeService())
+    except Exception as e:
+        print(f"Error launching Chrome: {e}")
         driver = webdriver.Chrome(options)
     log_msg("Google Chrome Launched!")
 
-    driver.implicitly_wait(3)
+    driver.implicitly_wait(5)
     driver.get(NaukriURL)
     return driver
 
@@ -192,11 +190,13 @@ def naukriLogin(headless=False):
     password_locator = "passwordField"
     login_btn_locator = "//*[@type='submit' and normalize-space()='Login']"
     skip_locator = "//*[text() = 'SKIP AND CONTINUE']"
+    close_locator = "//*[contains(@class, 'cross-icon') or @alt='cross-icon']"
 
     try:
         driver = LoadNaukri(headless)
 
-        if "naukri" in driver.title.lower():
+        log_msg(driver.title)
+        if "naukri.com" in driver.title.lower():
             log_msg("Website Loaded Successfully.")
 
         emailFieldElement = None
@@ -217,12 +217,13 @@ def naukriLogin(headless=False):
             passFieldElement.send_keys(password)
             time.sleep(1)
             loginButton.send_keys(Keys.ENTER)
-            time.sleep(1)
+            time.sleep(3)
 
             # Added click to Skip button
             print("Checking Skip button")
-
-            if WaitTillElementPresent(driver, skip_locator, "XPATH", 10):
+            if WaitTillElementPresent(driver, close_locator, "XPATH", 10):
+                GetElement(driver, close_locator, "XPATH").click()
+            if WaitTillElementPresent(driver, skip_locator, "XPATH", 5):
                 GetElement(driver, skip_locator, "XPATH").click()
 
             # CheckPoint to verify login
@@ -267,18 +268,16 @@ def UpdateProfile(driver):
             editElement = GetElement(driver, edit_locator, locator="XPATH")
             editElement.click()
 
-            WaitTillElementPresent(driver, mobXpath, "XPATH", 20)
+            WaitTillElementPresent(driver, mobXpath, "XPATH", 10)
             mobFieldElement = GetElement(driver, mobXpath, locator="XPATH")
             if mobFieldElement:
                 mobFieldElement.clear()
                 mobFieldElement.send_keys(mob)
                 driver.implicitly_wait(2)
                 
-                saveFieldElement = GetElement(driver, saveXpath, locator="XPATH")
-                saveFieldElement.send_keys(Keys.ENTER)
-                driver.implicitly_wait(3)
-            else:
-                log_msg("Mobile number element not found in UI")
+            saveFieldElement = GetElement(driver, saveXpath, locator="XPATH")
+            saveFieldElement.send_keys(Keys.ENTER)
+            driver.implicitly_wait(3)
 
             WaitTillElementPresent(driver, save_confirm, "XPATH", 10)
             if is_element_present(driver, By.XPATH, save_confirm):
@@ -293,11 +292,9 @@ def UpdateProfile(driver):
                 mobFieldElement.send_keys(mob)
                 driver.implicitly_wait(2)
     
-                saveFieldElement = GetElement(driver, saveXpath, locator="XPATH")
-                saveFieldElement.send_keys(Keys.ENTER)
-                driver.implicitly_wait(3)
-            else:
-                log_msg("Mobile number element not found in UI")
+            saveFieldElement = GetElement(driver, saveXpath, locator="XPATH")
+            saveFieldElement.send_keys(Keys.ENTER)
+            driver.implicitly_wait(3)
 
             WaitTillElementPresent(driver, "confirmMessage", locator="ID", timeout=10)
             if is_element_present(driver, By.ID, "confirmMessage"):
@@ -311,47 +308,51 @@ def UpdateProfile(driver):
         catch(e)
 
 
+
 def UpdateResume():
     try:
-        # random text with with random location and size
+        # Random text with random location and size
         txt = randomText()
-        xloc = randint(700, 1000)  # this ensures that text is 'out of page'
+        xloc = randint(700, 1000)  # This ensures that text is 'out of page'
         fsize = randint(1, 10)
 
         packet = io.BytesIO()
         can = canvas.Canvas(packet, pagesize=letter)
         can.setFont("Helvetica", fsize)
-        can.drawString(xloc, 100, "lon")
+        can.drawString(xloc, 100, txt)
         can.save()
 
         packet.seek(0)
         new_pdf = PdfReader(packet)
-        existing_pdf = PdfReader(open(originalResumePath, "rb"))
-        pagecount = len(existing_pdf.pages)
-        print("Found %s pages in PDF" % pagecount)
+        with open(originalResumePath, "rb") as f:
+            existing_pdf = PdfReader(f)
+            pagecount = len(existing_pdf.pages)
+            print("Found %s pages in PDF" % pagecount)
 
-        output = PdfWriter()
-        # Merging new pdf with last page of my existing pdf
-        # Updated to get last page for pdf files with varying page count
-        for pageNum in range(pagecount - 1):
-            output.addPage(existing_pdf.get_page_number(pageNum))
+            output = PdfWriter()
+            # Merging new pdf with last page of existing pdf
+            for pageNum in range(pagecount - 1):
+                output.add_page(existing_pdf.pages[pageNum])
+            page = existing_pdf.pages[pagecount - 1]
+            page.merge_page(new_pdf.pages[0])
+            output.add_page(page)
 
-        page = existing_pdf.get_page_number(pagecount - 1)
-        page.mergePage(new_pdf.get_page_number(0))
-        output.addPage(page)
-        # save the new resume file
-        with open(modifiedResumePath, "wb") as outputStream:
-            output.write(outputStream)
-        print("Saved modified PDF : %s" % modifiedResumePath)
-        return os.path.abspath(modifiedResumePath)
+            # Save the new resume file
+            with open(modifiedResumePath, "wb") as outputStream:
+                output.write(outputStream)
+            print("Saved modified PDF: %s" % modifiedResumePath)
+            return os.path.abspath(modifiedResumePath)
     except Exception as e:
         catch(e)
     return os.path.abspath(originalResumePath)
 
 
+
 def UploadResume(driver, resumePath):
     try:
         attachCVID = "attachCV"
+        lazyattachCVID = "lazyAttachCV"
+        uploadCV_btn = "//*[contains(@class, 'upload')]//input[@value='Update resume']"
         CheckPointXpath = "//*[contains(@class, 'updateOn')]"
         saveXpath = "//button[@type='button']"
         close_locator = "//*[contains(@class, 'crossIcon')]"
@@ -363,9 +364,13 @@ def UploadResume(driver, resumePath):
             GetElement(driver, close_locator, locator="XPATH").click()
             time.sleep(2)
 
-        WaitTillElementPresent(driver, attachCVID, locator="ID", timeout=10)
-        AttachElement = GetElement(driver, attachCVID, locator="ID")
-        AttachElement.send_keys(resumePath)
+        if WaitTillElementPresent(driver, lazyattachCVID, locator="ID", timeout=5):
+            AttachElement = GetElement(driver, uploadCV_btn, locator="XPATH")
+            AttachElement.send_keys(os.path.abspath(resumePath))
+
+        if WaitTillElementPresent(driver, attachCVID, locator="ID", timeout=5):
+            AttachElement = GetElement(driver, attachCVID, locator="ID")
+            AttachElement.send_keys(os.path.abspath(resumePath))
 
         if WaitTillElementPresent(driver, saveXpath, locator="ID", timeout=5):
             saveElement = GetElement(driver, saveXpath, locator="XPATH")

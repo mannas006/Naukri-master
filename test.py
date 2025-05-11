@@ -1,11 +1,11 @@
 import unittest
-import naukri
+import naukria
 
 
 class Test(unittest.TestCase):
     def test_naukri(self):
-        (status, driver) = naukri.naukriLogin(headless=True)
-        naukri.tearDown(driver)
+        (status, driver) = naukria.naukriLogin(headless=True)
+        naukria.tearDown(driver)
         self.assertFalse(status)
 
 
