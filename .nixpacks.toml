@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["wget", "curl", "unzip", "python311", "chromium"]
+
+[phases.install]
+cmds = [
+  "pip install -r requirements.txt",
+  "wget -q https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/136.0.7103.92/linux64/chromedriver-linux64.zip",
+  "unzip chromedriver-linux64.zip",
+  "mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver",
+  "chmod +x /usr/local/bin/chromedriver"
+]
+
+[phases.start]
+cmd = "python3 Naukri.py"
