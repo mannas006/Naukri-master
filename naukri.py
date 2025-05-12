@@ -39,7 +39,7 @@ mob = "9635623705"  # Type your mobile number here
 updatePDF = False
 
 # If Headless = True, script runs Chrome in headless mode without visible GUI
-headless = False
+headless = True
 
 # ----- No other changes required -----
 
